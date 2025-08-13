@@ -1,0 +1,94 @@
+/*h1、p、body要素の上下左右余白（margin）を0にしてください。*/
+h1, p, body{
+    margin: 0;
+}
+/*記事内全てのp要素とa要素のフォントサイズを20pxとします。*/
+p,a{
+    font-size: 20px;
+}
+
+/*header要素内のスタイルを以下のように設定します。*/
+header{
+    margin: 20px;                         /*下の余白を20pxにします。*/
+    background-color: rgb(244, 79, 79); /*景色を「 rgb(244, 79, 79)」にします。*/
+    text-align: center;                   /*中の要素が中央揃えになるようにします。*/    
+}
+
+/*h1要素内のスタイルを以下のように設定します。*/
+h1{
+    
+    color: rgb(255, 255, 255);          /*文字色をrgb(255, 255, 255)にします。*/
+}
+
+/*main要素全体について、以下のスタイルを設定します。*/
+main{
+    margin: 10;                            /*main要素内の余白を上下左右とも10pxにします。*/
+}
+
+/*id名parentの要素について、以下のスタイルを設定します。*/
+#parent{
+        display: flex;                     /*displayプロパティを使い、id名parentの要素をFlexコンテナにします。*/
+        justify-content: space-around;     /*justify-contentプロパティでFlexboxコンテナの子要素（Flexアイテム）「一番左と一番右のアイテムも含め、均等な間隔で配置する」値を設定します。*/
+}
+
+/*class名contentsの要素について、以下のスタイルを設定します。*/
+.contents{
+    border: 3px, solid, rgb(238, 204, 204);  /*線（太さ3px、実線、色rgb(238, 204, 204)）で要素を囲います。*/
+    flex-basis: 25%;                           /*幅は親要素の25%にします。プロパティはwidthではなく、flex-basisを使ってください。*/
+    padding: 10px, 15px;                       /*要素内の余白は上下10px、左右15pxにします。*/
+    margin: 20px, 0px;                         /*要素外の余白は上下20px、左右0にします。*/ 
+    text-align: center;                        /*中の要素が中央揃えになるようにします。*/    
+}
+
+
+
+/*h2要素について、以下のスタイルを設定します。*/
+h2{
+    font-size: 25px;
+    border-bottom:3px, dotted, rgb(236, 122, 122);     /*h2要素のフォントサイズを25pxにし、下線（太さ3px、点線、色rgb(236, 122, 122)）を引きます。*/
+}
+
+h2::before {
+   content: "●";
+   color: rgb(239, 111, 139);                    /*h2要素の前に「●」記号を表示します。色はrgb(239, 111, 139)とします。*/
+}
+
+
+p:nth-of-type(2)::first-letter{
+    font-weight: bold;            /*太字*/
+    color: rgb(97, 206, 249);   /*文字色はrgb(97, 206, 249)*/
+} 
+
+/*class名contents内のimg要素に、以下のスタイルを設定します。*/
+.contents img {
+    margin: 10px, 0px;   /*marginは上下10px、左右0*/
+    width: 70%;          /*幅は70%*/
+}
+
+/*footer要素内には、以下のスタイルを設定します。*/
+footer{
+    background-color: rgb(244, 79, 79);  /*背景色はrgb(244, 79, 79)にします。*/
+    text-align: center;                    /*中身の要素が中央揃えになるようにします。*/
+}
+
+a{
+    color: rgb(255, 255, 255);    /*文字色はrgb(255, 255, 255)にします。*/
+}
+a:visited {
+    color: rgb(193, 234, 251);    /*訪問済みリンクの文字色がrgb(193, 234, 251)に変化するようにします。*/
+}
+a:hover {
+    color: rgb(245, 178, 168);    /*マウスカーソルが乗ると文字色がrgb(245, 178, 168)に変化するようにします。*/
+}
+@media screen and (max-width: 768px){          /*最後に画面幅に合わせて、表示内容が変わるようにします。画面幅768px以下になったら表示が変わるようにブレークポイントを設定します。*/
+    h2{
+        font-size: 30px;             /*h2のフォントサイズは30pxとします。*/
+    }
+    p{
+        font-size: 25px;              /*pのフォントサイズは25pxとします。*/
+    }
+    #parent{
+        flex-direction: column;        /*Flexboxコンテナであるid名parent内の要素が縦に並ぶようにします。*/
+    }
+
+}
